@@ -1,0 +1,286 @@
+✦✦ PHP Sessões e Cookies ✦✦
+
+✦Índice das Informações✦
+▷ 01- Como abrir o painel de desenvolvimento da página
+▷ 02- Aonde se loicaliza os cookies
+▷ 03- Comando para criar um Cookie
+▷ 04- Como fazer com que o browser leia um cookie
+▷ 05- Comando para iniciar um sessão
+▷ 06- Variável para criar uma sessão e para que serve
+▷ 07- Comando para informa a localização dos dados do cookie "descriptografados"
+e como armazena-lo
+▷ 08- A variável que cria uma sessão ($_SESSION) pode criar uma array
+▷ 09- Erro variable:_SESSION 
+▷ 10- Como fazer com que a página que está recebendo os cookie não possa mais ler os dados 
+já recebidos
+▷ 11- Comando uset
+▷ 12- Recaptulação sobre os dados criados pela sessão
+▷ 13- Como destruir uma sessão por completo
+▷ 14- Comando para destruir os dados de apenas uma sessão específica
+▷ 15- Comando para anular uma sessão específica
+▷ 16- Comando: header
+▷ 17- Comando: exit 
+▷ 18- Tutorial completo de como realizar uma página de login simples 
+encontra-se no próprio video
+▷ 19- Comando: require
+▷ 20- Comando: __DIR__. 
+▷ 21- Comando: session_set_cookie_params 
+▷ 22- Life time 0 
+▷ 23- Não funciona nativamente no windows os comandos apresentados 
+nesta aula 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Cookies e Sessões 
+
+01- Como abrir o painel de desenvolvimento da página [Ctrl + Shift + i]
+
+02- Aonde se loicaliza os cookies [para acha-los você deve abrir o painel de 
+comandos, ir em "application" e dentro da pasta "strorage" estará armazenados os
+cookies da página]
+
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Trabalhando com cookies
+
+03- Comando para criar um Cookie [O comando para realizar este comando é: "setcookie",
+o valor da primeira variável é o seu nome, o segundo é o valor que você irá inserir 
+em seu cookie e por fim será a data de validade desse cookie, para isso você deverá usar 
+comando "time()" para poder contabilizar os segundos com isso feito você ira somar
+a quantidade de segundos que deseja que seu cookie fique ativo (também pode se utilizar 
+de multiplicação, subtração...)
+EX:
+setcookie('meunome', 'Joao V M', time() + (3600 * 24 * 360 * 99));
+setcookie('meunooome', 'Vitor', time() + (3600 * 24 * 360 * 99));
+
+Obs: caso você queira remover o cookie sem apagar sua linha de código você apenas
+precisa fazer que a quantidade de segundos seja equivalente menor ou igual a -1
+Ex:
+setcookie('meunome', 'Joao V M', time() - 1);]
+
+04- Como fazer com que o browser leia um cookie [Você deve utilizar a variável 
+$_COOKIE junto do comando var_dump(este comando obriga a array exibir todas as suas 
+informações), fará com o valor de todos os cookies sejam exibidos
+EX:
+var_dump($_COOKIE);
+
+Obs: Caso você deseje exibir o valor de um cookie em específico você precisa apenas 
+adicionar o nome do cookie e adicionar-lo a array
+Ex:
+var_dump($_COOKIE['meunome']);]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Criando Sessões
+
+05- Comando para iniciar um sessão [session_start(), ela sempre deve ser utilizada 
+nas primeiras linhas de código(dando espaço apenas para um código em específico se necessário),
+pois na maioria comando que rodem antes dele podem apresentar problemas de funcionamento]
+
+06- Variável para criar uma sessão e para que serve [$_SESSION, sua função é gerar um nome e valor 
+randômicos para o cookie que é apresentado apara o browser/cliente, enquanto armazena o nome e valor 
+verdadeiros no servidor]
+
+07- Comando para informa a localização dos dados do cookie "descriptografados"
+e como armazena-lo
+[(session_save_path(), junto dele deve ser utilizado o comando de 
+var_dump para assim poder fazer com que exiba seus valores
+Ex:
+var_dump(session_save_path());
+
+Dentro dele você irá informar aonde você quer que ele armazene os dados "descriptografados", 
+para isso você deve criar um novo diretório/pasta aonde se localiza os códigos, usar o comando 
+__DIR__. assim ele pegará todo o caminho até o arquivo atual, usar esse comando: /../ não entendi 
+o pq, e por fim informar o nome da pasta onde será armazenado a informação
+Ex:
+var_dump(session_save_path(__DIR__.'/../sessoes'));
+]
+
+A PARTE DE CIMA EXPLICA O COMANDO MAS NÃO FAZ MUITO SENTIDO 
+FOCO AQUI EM BAIXO 
+
+Utilize o comando de localizar o caminho e o de armazana-lo junto da página de código onde a sessão 
+está ativa e foi criada (pelo o que pude entender uma sessão por si só também cria um cookie 
+automáticamente com nome e valor, pois foi aplicada a ela tais dados), ao fim isso resultará em 
+dados de nome e valor "criptografado" para o browser/cliente e dados legíveis na pasta do servidor 
+(NÃO ESQUEÇA DE CRIAR UMA PASTA PARA ESTE FIM)
+Ex:
+<?php
+
+session_save_path(__DIR__.'\sessoes');
+
+session_start();
+
+
+
+$_SESSION['meunome'] = 'Joaoooiad';
+Obs: sessoes é o nome que foi dada a pasta, este nome poderia ser substituido por 
+qualquer outro, o comando /../ se alterou para \ o porque disto eu não sei. Para ler dos 
+dados legíveis basta abrir o arquivo no Visual Studios
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Manipulando os dados das sessões
+
+08- A variável que cria uma sessão ($_SESSION) pode criar uma array [Ao invés de apenas 
+criar um nome com um valor ela pode gerar uma array
+Ex:
+$_SESSION['usuario'] = [
+    'nome' => 'Joao',
+    'idade' => 19,
+    'ativo' => true,
+    'rate' => 4.3
+ ];
+]      
+
+09- Erro variable:_SESSION [Erro variável não definida é dado quando uma sessão não é 
+iniciada(session_start();), isso faz com que a variável global $_SESSION não possa ser 
+utilizada, pois o código não irá reconhece-la]
+ 
+10- Como fazer com que a página que está recebendo os cookie não possa mais ler os dados 
+já recebidos [para isso se utiliza comando uset: ele serve para anular uma variável, com ele ativado
+fará com que a variável que ele foi imposto seja desativada, com isso será impossível da página recebedora 
+de dados continue a utilizar os dados recebidos 
+Ex:
+<?php
+
+session_start();
+
+
+$_SESSION['usuario'] = [
+    'nome' => 'Joaoi',
+    'idade' => 19,
+    'ativo' => true,
+    'rate' => 4.3
+ ];
+ 
+
+ unset($_SESSION['usuario']);
+]
+
+11- Comando uset [serve para anular uma variável, com ele ativado
+fará com que a variável que ele foi imposto seja desativada] 
+
+12- Recaptulação sobre os dados criados pela sessão
+[
+Comando $_SESSION: Serve para armazenar um dado
+Comando var_dump($_SESSION): Serve para ler os dados armazenados
+Comando unset: Serve para apagar um dado armazenado
+Comando para atualizar um dado: Basta você sobrescrever o valor da variável,
+não precisa nem ao menos ser o mesmo tipo de dado, uma array poder se tornar 
+uma string
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Destruindo sessão
+
+13- Como destruir uma sessão por completo [Para isto basta criar uma nova página
+na web com o código php: session_destroy() junto do comando: session_start();
+para atica-lo basta acessar a página e quando você retorna para a página onde 
+o cookie estavam sendo exibidos, você reparará que os dados sumiram
+Ex:
+
+Página A (Ela é a responsável por criar os dados)
+Página B (Ela é a responsável por exibir os dados criados na página A
+Página C (Ela é a responsável por destruir os dados que a página B coletou da página A
+
+Ao acessar a página A você criará/atualizará os dados, na página B apareceram os dados 
+criados/atualizados na página A e ao acessar a página C você destruirá os dados que haviam 
+sidos coletados por ser Pc, por isso quando retornará a página B não será exibido nenhum dado,
+mas caso acesse a página A você recriará os dados, logo ao acessar página B os dados apareceram 
+normalmente]
+
+14- Comando para destruir os dados de apenas uma sessão específica [Para isso você 
+usará o comando: unset($_SESSION['x'] junto do comando session_start(); é claro,) 
+seguindo a mesma lógica apresentada na página C da explicação de número 13 (Porém por algum 
+motivo o comando unset($_SESSION['x']) está destruindo não apenas a sua sessão designada, mas sim
+ela e todas as demais sessões criadas abaixa dela, caso haja uma sessão a cima dela não será destruida
+]
+
+15- Comando para anular uma sessão específica [Para isso você usará o comando: $_SESSION['x'] = null
+junto do comando session_start(); é claro, seguindo a mesma lógica apresentada na página C da explicação 
+de número 13 (Já este comando veem funcionado perfeitamente, anulado apenas a sua sessão designada]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Exemplo prático login Básico 
+
+16- Comando: header [Ele serve para realizar um redirecionamento no php
+Ex:
+header('location: 05.1-login.php');
+]
+
+17- Comando: exit [Serve para parar um código php de ser realizado]
+
+18- Tutorial completo de como realizar uma página de login simples 
+encontra-se no próprio video
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Configurações e segurança de sessões
+
+19- Comando: require [Sua função é importa arquivos para outros arquivos]
+
+20- Comando: __DIR__. [Esta constante informa o caminho até o diretório do arquivo]
+
+21- Comando: session_set_cookie_params [É usado para definir os parâmetros do cookie 
+de sessão definidos no arquivo php]
+
+22- Life time 0 [Quando o tempo de vida é delimitado a 0 significa que sua expiração
+será qunado o browser for fechado]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Session handler
+
+23- Não funciona nativamente no windows os comandos apresentados 
+nesta aula 
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

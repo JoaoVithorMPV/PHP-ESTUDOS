@@ -1,0 +1,991 @@
+✦✦Comandos e Informações "Avançando com PHP""✦✦
+
+✦Índice das Informações✦
+▷ 1- Conceito If e Else
+▷ 2- (CMD) comando cd ../..
+▷ 3- Como abrir um arquivo PHP no browser
+▷ 4- Como definir se algo é falso ou verdadeiro
+▷ 5- O que são Operadores no PHP 
+▷ 6- Operadores de Comparação 
+▷ 7- O que é Booleano
+▷ 8- (CMD) Ctrl + c
+▷ 9- (CMD) cls
+▷ 10- Como determinar qual pasta o servidor irá abrir
+▷ 11- Operadores Lógicos
+▷ 12- Operador Ternário
+▷ 13- Exemplo funcional de uma estrutura com 
+Operadores, Váriaveis e Tags: If/Else 
+▷ 14- Tag: While
+▷ 15- Tag: Break
+▷ 16- Tag: continue
+▷ 16- Tag: <br>
+▷ 17- $XXX++
+▷ 18- Como fazer uma tábuada 
+▷ 19- *$i = $contador
+▷ 20- O que é Sintaxe
+▷ 21- Tag: For
+▷ 22- Diferença entre as tags: While e For
+▷ 23- "Atributo": count
+▷ 24- EX adicional com a tag: For
+▷ 25- Tag: Foreach
+▷ 26- Tag: Get
+▷ 27- O que uma chave
+▷ 28- Recapilulação e Resumo sobre ARRAY:
+▷ 29- Tag: $_GET
+▷ 30- O que é uma Query String
+▷ 31- O que é Index
+▷ 32- O que é uma Função no php
+▷ 33- Função: Isset 
+▷ 34- Operador ?? 
+▷ 35- Função: foreach
+▷ 36- Lista de Planetas
+▷ 37- Como criar um "banco de dados"
+▷ 38- Tag de html: <hr>
+▷ 39- Tag de html: <fieldser></fieldset>
+▷ 40- Tag de html: <legend>x</legend> 
+▷ 41- Tag de html: <textarea></textarea>
+▷ 42- Atributos de html: rows="" e cols="" 
+▷ 43- Tecla para entrar no codigo fonte
+▷ 44- ...
+▷ 45- O que são as Funções
+▷ 46- "Tag" para puxar uma Função: function 
+▷ 47- Comando return
+▷ 48- Como deixar um valor padrão para um parametro 
+▷ 49- Validação do Código
+▷ 50- Função: empty
+▷ 51: Função trim() 
+▷ 52- Função: is_null() 
+▷ 53- Função: strip_tags 
+▷ 54- Variável Global: $_SERVE 
+▷ 55- Variável Global: $_REQUEST 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+► Aula: Condicionais - If/Else
+
+✪ Seu nome é um acrônimo da expressão inglesa change directory 
+("mudar diretório") e sua finalidade é, como sugere seu nome, mudar o
+diretório atual de trabalho (isto é, o diretório em que se está) para 
+uma outra especificada.
+
+1- Conceito If e Else [ É uma instrução que permite a execução de um 
+comando. O comando if é executado quando uma condição for verdadeira, 
+caso contrário o comando else é executado, 
+EX TEÓRICO: 
+if(Se) (condicao) for verdadeira 
+     Executa este comando
+Else(Se não) 
+     Executa
+EX PRÁTICO:
+<?php
+
+$chovendo = false;
+
+if ($chovendo) {
+    echo "Vou ficar em casa!";
+} else {
+echo "Vou pra piscina!";
+}
+]
+
+2- (CMD) comando cd ../.. [Serve para retroceder a "pasta" Acer(C:)]
+
+3- Como abrir um arquivo PHP no browser [Para isso é preciso colocar
+na url "localhost:" + o servidor que estiver utilizando (o servidor 
+deve ser inicializado antes desse procedimento no prompt de comando) + "/" + o nome do 
+seu arquivo 
+EX: localhost:8000/01-condicionais-IfeElse.php]
+
+4- Como definir se algo é falso ou verdadeiro [Para isso basta adcionar
+o símbolo de igual (=) e definilo se é falso ou verdadeiro, para o caso
+de verdadeiro utiliza-se "TRUE" e para falso "FALSE",
+EX: $chovendo = true;]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Condicionais-Operadores de comparação
+
+5- O que são Operadores no PHP[Os operadores nos permitem modificar ou 
+obter novos valores a partir de uma ou mais variáveis.]
+
+6- Atribuir valor [Com o síbolo de "=" atribuimos valores a variáveis 
+é feita com o operador do seu lado esquerdo fica a variável à qual está
+sendo atribuído o valor, e à sua direita pode-se colocar qualquer 
+expressão (constantes, variáveis, expressões numéricas), desde que seu 
+resultado tenha tipo igual ao da variável.]
+Ex: $chovendo = false;
+
+6- Operadores de Comparação 
+[
+❂ OPERADOR: =
+❂ NOME: Igual
+❂ Ex TEÓRICO: $a==$b
+❂ Resultado: Verdadeiro se variável $a é igual a variável $b
+✪ EX PRÁTICO:
+$a = 10;
+$b= 8;
+
+if($a == $b) {
+    echo "A é igual a B, OI";
+} else {
+    echo "A é diferente de B, TCHAU";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: !=
+❂ NOME: Diferente
+❂ Ex: $a != $b
+❂ Resultado: Verdadeiro se variável $a é diferente a variável $b
+✪ EX PRÁTICO:
+$a = 10;
+$b= 8;
+
+if($a != $b) {
+    echo "A é diferente de B, TCHAU";
+} else {
+    echo "A é igual a B, OI";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: > 
+❂ NOME: Maior
+❂ Ex: $a> $b
+❂ Resultado: Verdadeiro se variável $a é maior que variável $b
+✪ EX PRÁTICO:
+$a = 10;
+$b= 8;
+
+if ($a > $b) {
+    echo "A é maior do que B";
+} else {
+    echo "A é menor do que B";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: >=
+❂ NOME: Maior ou Igual
+❂ Ex: $a >= $b
+❂ Resultado: Verdadeiro se variável $a é maior ou igual a variável $b
+✪ EX PRÁTICO:
+$a = 10;
+$b= 10;
+
+if ($a >= $b) {
+    echo "A é maior ou igual a B";
+} else {
+    echo "A é menor do que B";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: > 
+❂ NOME: Menor 
+❂ Ex: $a < $b
+❂ Resultado: Verdadeiro se variável $a é menor que variável $b.
+✪ EX PRÁTICO:
+$a = 8;
+$b= 10;
+
+if ($a < $b) {
+    echo "A é menor do que B";
+} else {
+    echo "B é menor do que A;
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: <=
+❂ NOME: Menor ou Igual
+❂ Ex: $a <= $b
+❂ Resultado: Verdadeiro se variável $a é menor ou igual a variável $b.
+✪ EX PRÁTICO:
+$a = 8;
+$b= 10;
+
+if ($a <= $b) {
+    echo "A é menor do que B";
+} else {
+    echo "B é menor do que A;
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+]
+
+7- O que é Booleano [É um tipo de dado lógico que pode ter apenas um 
+de dois valores possíveis: verdadeiro ou falso (True ou False)]
+
+8- (CMD) Ctrl + c [Desliga o servidor criado]
+
+9- (CMD) cls [Limpa a tela]
+
+10- Como determinar qual pasta o servidor irá abrir {Para isso você não
+deve tentar informla-lo no "CMD", mas sim na URL do browser, 
+EX: http://localhost:8000/01-condicionais-IfeElse.php]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Condicionais-Operadores Lógicos
+
+11- Operadores Lógicos
+[
+❂ OPERADOR: &&
+❂ DESCRIÇÃO: E
+❂ EX TEÓRICO:  
+A  B = A&&B
+V  V =  V
+V  F =  F
+F  V =  F
+F  F =  F
+(Só será verdadeiro caso todos os valores forem verdadeiros)
+✪ EX PRÁTICO:
+$media_minima = 7;
+$frequencia_minima = 75;
+
+$media_aluno = 5;
+$frequencia_aluno = 50;
+
+if($media_aluno >= $media_minima && $frequencia_aluno >= $frequencia_minima) {
+    echo "Aprovado!";    
+} else {
+    echo"Reprovado!";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: || (barras)
+❂ DESCRIÇÃO: Ou
+❂ EX TEÓRICO:  
+A  B = A||B
+V  V =  V
+V  F =  V
+F  V =  V
+F  F =  F
+(Só será verdadeiro quando apenas um dos valores forem verdadeiros)
+✪ EX PRÁTICO:
+$media_minima = 7;
+$frequencia_minima = 75;
+
+$media_aluno = 8;
+$frequencia_aluno = 50;
+
+//Para ser aprovado nessa escola é necessário apenas passar em um dos 
+//requesitos, média ou frequencia 
+if($media_aluno >= $media_minima || $frequencia_aluno >= $frequencia_minima){
+    echo "Aprovado!";
+} else {
+    echo "Reprovado!";
+}
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+❂ OPERADOR: !
+❂ DESCRIÇÃO: Não
+❂ EX TEÓRICO:  
+A ➨ A!  
+V    F
+F    V
+(Inverte o valor da condição)
+✪ EX PRÁTICO:
+$chovendo = true;
+
+if (!$chovendo) {
+    echo "Vou ficar em casa!";
+} else {
+echo "Vou pra piscina!";
+}
+
+┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Condicionais-Else if/Operador Ternário
+
+12- Operador Ternário [Em suma, ele é uma versão compacta do if.
+⋆Sintaxe do operador ternário:
+condição ? codigoUm : codigoDois; 
+Primeiro declaramos a condição; logo após o sinal de interrogação (?), 
+o código a ser executado caso a condição seja verdadeira; e depois dos 
+dois pontos, o código a ser executado caso contrário.
+⋆Exemplo de uso:
+<?php
+$a = 8;
+$b = 2;
+
+echo $a/$b == 2 ? "O resultado da divisão é 2" : "O resultado da divisão não é 2";
+?>;
+⋄FORMA CURTA OU SHORT FORM (Não sei se ta certo, a forma certa que 
+conheço é utilizando "??" [34])
+operador ternário também possui uma versão ainda mais compacta, 
+chamada de "forma curta" ou short form". 
+⋆A sintaxe da forma curta do operador ternário é:
+(condição/codigoUm) ?: codigoDois;
+Dessa forma, caso a condição seja atendida, a própria será o código a 
+ser executado, caso contrário, será executado o "codigoDois".
+⋆Exemplo de uso:
+$nome = "Fulano de tal";
+$nome = ($nome) ?: "Sem nome";
+⋆EXEMPLO PRÁTICO
+Suponha que você está desenvolvendo um site e precisa exibir alguns 
+conteúdos conforme a idade dos usuários. Para usuários com menos de 18 
+anos, a renderização de alguns conteúdos não deve ser realizada. Para 
+implementar essa lógica podemos fazer uso das estruturas de condição.
+Exemplo de uso com if/else:
+<?php
+$idade = 18;
+
+if ($idade &gt;= 18)
+{
+$x = "É maior de idade";
+}
+else
+{
+$x = "É menor de idade";
+}
+
+echo $x;
+?>;
+
+⋆ Exemplo de uso com o operador ternário:
+<?php
+
+$idade = 18;
+
+$x = $idade &gt;= 18 ? "É maior de idade" : "É menor de idade";
+
+echo $x;
+?>
+
+#- Tag Ternário: ? true : false [Ela é a junção de If e Else, 
+dependendo da resolução das váriaveis e operadores resultará em 
+sentenças verdadeiras ou falsas, 
+Ex: $reprovado_por_faltas = $frequencia_aluno < $frequencia_minima ? true : false;]
+
+13- Exemplo funcional de uma estrutura com 
+Operadores, Váriaveis e Tags: If/Else 
+[
+$media_minima = 7;
+$media_recuperação = 5;
+$frequencia_minima = 70;
+
+$media_aluno = 7;
+$frequencia_aluno = 70;
+
+$reprovado_por_faltas = $frequencia_aluno < $frequencia_minima ? true : false;
+
+if (!$reprovado_por_faltas) {
+
+    if ($media_aluno < $media_recuperação) {
+        echo "Reprovado!";
+    }   else if ($media_aluno < $media_minima) {
+        echo "Recuperação!";
+        } else {
+            echo "Aprovado!";
+        }
+    
+    } else {
+        echo "Reprovado por Faltas";
+    }
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Laços de Repetição - White 
+
+14- Tag: While [O while é a estrutura de repetição mais simples do PHP.
+Com ele informamos que um bloco de código deve ser repetido enquanto a
+condição declarada for verdadeira. A sintaxe é composta por uma 
+expressão, validada antes de cada iteração do loop, e pelo bloco de 
+código a ser executado, declarado entre chaves ´{ }´,
+EX: 
+$contador = 0;
+while ($contador <= 10) {
+    echo $contador . "<br>";
+
+    $contador = $contador + 1;
+}
+]
+
+15- Tag: Break [É utilizado para interromper algo, como por exemplo uma 
+linha de código programado para seguir um script do ponto A ate o E, com
+ele você pode fazer com que seja interrompido no C. 
+EX prático: 
+$contador = 0;
+while ($contador <= 10) {
+    echo $contador . "<br>";
+
+    if ($contador == 3){
+        break;
+    }
+
+    $contador = $contador + 1;
+
+}
+]
+
+16- Tag: continue [ Continue pula a iteração atual, ignorando todo o 
+código declarado abaixo dele, dentro da estrutura de repetição. 
+Geralmente utilizamos if/else para determinar o momento em que esse 
+comando deverá ser executado.
+⊙ Explicação do EX1: 
+No código a seguir saltamos para a próxima iteração quando $i atinge o 
+valor “3”. Como resultado o código echo $i . "\n" não imprimirá esse 
+valor, apenas “1 2 4 5”.
+⊳ $i = 0;
+while ($i++ &lt; 5) {
+    if ($i == 3) continue;
+    echo $i . "\n";
+}
+⊙ Explicação do EX2:
+No código a seguir saltamos para a próxima iteração quando $contador 
+não e divisivel perfeitamente por 2. Como resultado o código echo 
+$contador imprimirá esses valores, apenas “2 4 6 8 10”. 
+⊳ $contador = 0;
+while ($contador <= 10) {
+    echo $contador . "<br>";
+    $contador = $contador + 1;
+
+    if ($contador % 2 != 0) {
+        continue;
+    }
+}
+
+16- Tag: <br> [É a mesma tag utilizada no html, ela possue a função de 
+"quebra de linha", assim criando um novo parágrafo 
+
+17- $XXX++ [É um comando que possibilita você indicar ao programa que 
+você deseja adicionar a aquela vária o mesmo valor dela uma segunda vez ,
+EX teórico: 
+$contador = 1;
+$contador++; 
+(A variável "$contador++" irá realizara seguinte função: 1 + 1)
+
+18- Como fazer uma tábuada 
+[
+while ($contador <= 10) {
+    echo $contador . "x" . $numero . "=" . ($contador * $numero) . "<br>";
+    $contador++;
+}
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Laços de Repetição - For
+
+19- *$i = $contador [a letra "i" é utilizada por padrão como $contador]
+
+20- O que é Sintaxe [Refere-se às regras que regem a composição de 
+textos com significado em uma linguagem formal, tal como uma linguagem 
+de programação, isto é, os textos para os quais faz sentido definir a 
+semântica ou significado, ou fornecer uma interpretação]
+
+21- Tag: For [Executa o loop enquanto a condição for verdadeira, porém 
+você pode instanciar as variaveis contadoras dentro da estrutura do 
+loop,
+EX: 
+for ($i = 0; $i <= 10; $i++){
+    echo $i . "<br>";
+}
+]
+
+22- Diferença entre as tags: While e For [("For" é utilizado apenas para 
+laços de repetiços com números, enquanto com o "Whine" pode se utilizar
+texto) While: Executa o loop enquanto a condição for verdadeira. Do 
+While: Executa o loop primeiro e depois verifica a condição. For: 
+Executa o loop enquanto a condição for verdadeira, porém você pode 
+instanciar as variaveis contadoras dentro da estrutura do loop]
+
+23- "Atributo": count [é usada para contar os elementos que estão dentro
+da array]
+
+24- EX adicional com a tag: For
+[
+$frutas = [
+    'banana',
+    'maça',
+    'laranja',
+    'melancia',
+    'pêra'
+];
+
+for($i = 0; $i < count($frutas); $i++){
+    echo $frutas[$i] . "<br>";
+}
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Laços de REpetição - Foeach
+
+25- Tag: Foreach [Ela é utilziada para interagir com as "arrays" de método 
+mais simples e fácil do que tags como "if" e "else", 
+EX:
+$planetas = [
+    "mercurio",
+    "venus",
+    "terra",
+    "marte",
+    "jupiter",
+    "saturno",
+    "urano",
+    "netuno",
+];
+
+foreach ($planetas as $planetas) {
+    echo $planetas . "<br>";
+}
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Get 
+
+26- Tag: Get [O método GET é um dos métodos utilizados para o envio de 
+dados de um formulário web para processamento por um script PHP. Ele 
+se baseia na variável superglobal $_GET, que é um array associativo de 
+variáveis que são passadas para o script atual via o método HTTP GET]
+
+27- O que uma chave [As "chaves" fazem parte da estrutura das arrays 
+que possuem a finalidade de armazenar tanto as chaves enqaunto os seus 
+valores]
+
+28- Recapilulação e Resumo sobre ARRAY:
+[Para declarar um array em PHP utilizamos o construtor de linguagem 
+array() , para o qual podemos passar por parâmetro os valores que 
+desejamos armazenar, separados por vírgula, 
+EX: $array = array(1, 2, 3);
+Também é possível iniciar o array utilizando colchetes, como pode ser 
+observado abaixo, pois para o PHP essas duas formas de inicialização 
+são equivalentes: $array = [1, 2, 3];
+O PHP permite ainda a declaração de arrays associativos. Para esse fim,
+o construtor array() pode receber quais serão as chaves às quais os 
+valores estão associados como parâmetro. 
+EX:
+  $array = array(
+   “chave1” =&gt; 1,
+   “chave2” =&gt; “PHP”,
+   “chave3” =&gt; false
+   );
+
+Após declarar a variável que contém os valores, podemos acessá-los 
+utilizando sua posição,
+EX:
+  echo $array[0];
+  echo $array[1];
+  echo $array[2];
+]
+
+29- Tag: $_GET [É um array associativo que trata os dados recebidos 
+através de HTTP GET. $_GET recebe os dados diretamente de uma URL após 
+um ponto de interrogação, 
+EX: 
+(URL)www.site.com.br/index.php? variavel=valor&cor=azul.
+(Código)
+echo $_GET['variavel'];
+echo "<br>";
+echo $_GET['cor'];
+(Com os dois juntos fará com que a chave mostre o valor quando enviado 
+ao browser, no local de "variavel" mostrará "valor" e o mesmo vale para
+a chave "cor")
+
+30- O que é uma Query String [Elas são os conjuntos de pares/valores 
+anexados a URLSeu uso é simples, após a URL de determinada página, 
+adicionamos o primeiro valor usando a seguinte sintaxe: ? Chave=Valor
+(sintaxe significa regra)
+
+31- O que é Index [Lista do conteúdo]
+
+32- O que é uma Função no php [Função em PHP é um trecho de código que 
+pode ser chamado (invocado) de qualquer parte do código para executar 
+uma tarefa qualquer e retornar algum valor. Ou seja, você pode chamar 
+quantas vezes forem necessárias a função. Você pode passar zero ou 
+mais parâmetros para uma função, e poderá retornar apenas um valor.]
+
+33- Função: Isset [é um função nativa do PHP que serve para saber se 
+uma variável está definida. Ela basicamente verifica a existência de 
+uma variável, e assim, retorna um valor boleano (true se for verdadeiro
+e false se for falso). Ou seja, caso uma variável não esteja definida,
+ela possui o valor nulo (null),
+EX: 
+$planeta = isset($_GET['planeta']) ? $_GET['planeta'] : false;
+
+if($planeta != false) {
+    echo $planeta;
+} else {
+    echo "planeta não informado";
+}
+]
+
+34- Operador ?? [O ?? é conhecido como null coalescing foi adicionado 
+no PHP 7. Sua funcionalidade é retornar o primeiro operando se ele 
+existir e não for nulo do contrário retorna o segundo.
+⋆O código em PHP 7:
+$valor = $_GET['id'] ?? 1;
+⋆Pode ser traduzido em PHP 5 como:
+$valor = isset($_GET['id']) ? $_GET['id'] : 1;
+⋆Outro exemplo:
+(URL)http://localhost:8000/08-get.php?planeta=marte&cor=azul
+(CMD)$cor = $_GET['cor'] ?? 'cor não informada';
+    echo $cor;
+
+35- Função: foreach [O método forEach é usado para percorrer arrays, 
+mas usa uma função de modo diferente do "laço for" tradicional. 
+O método forEach passa uma função de callback para cada elemento do 
+array juntamente aos seguintes parâmetros: Valor atual (obrigatório) - 
+O valor do elemento atual do array.]
+
+
+36- Lista de Planetas
+[
+<html>
+    <head>
+        <title>Lista de Planetas</title>
+    </head>
+    <body>
+        <?php
+        $planetas = [
+            "Mercurio",
+            "Venus",
+            "Terra",
+            "Marte",
+            "Jupiter",
+            "Saturno",
+            "Urano",
+            "Netuno"
+            ];
+            ?>
+
+            <ul>
+                <?php foreach($planetas as $planeta):?>
+                <li>
+                    <a href="08-get.php?planeta=<?php echo $planeta?>"><?php echo $planeta?><a>
+                </li>
+            <?php endforeach;?>
+            </ul>
+            
+    </body>
+</html>
+]
+37- Como criar um "banco de dados" 
+[EX: 
+<?php
+$planeta = isset($_GET['planeta']) ? $_GET['planeta'] : false;
+
+if($planeta != false) {
+    echo $planeta;
+} else {
+    echo "planeta não informado";
+}
+((((Arquivo:08-Get.php)))
+///////////////////////////////////////////////////////////////////////
+<html>
+    <head>
+        <title>Lista de Planetas</title>
+    </head>
+    <body>
+        <?php
+        $planetas = [
+            "Mercurio",
+            "Venus",
+            "Terra",
+            "Marte",
+            "Jupiter",
+            "Saturno",
+            "Urano",
+            "Netuno"
+            ];
+            ?>
+
+            <ul>
+                <?php foreach($planetas as $planeta):?>
+                <li>
+                    <a href="08-get.php?planeta=<?php echo $planeta?>"><?php echo $planeta?><a>
+                </li>
+            <?php endforeach;?>
+            </ul>
+            
+    </body>
+</html>
+((((Arquivo:08.1-planetas.php)))
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Post
+
+38- Tag de html: <hr> [Representa uma quebra temática entre 
+elementos de nível de parágrafo, semelhante a tag: <br>, porém com a 
+diferença de criar uma linha dividindo o conteúdo
+EX: 
+<html>
+    oi
+    <hr>
+    tchau
+</html>
+]
+
+39- Tag de html: <fieldser></fieldset> [É usado para agrupar elementos,
+semelhante a tag: <label>, porém com a diferença de criar uma caixa 
+separadndo o conteúdo
+EX:
+<html>
+<form>
+<fieldset>Nome</fieldset>
+<input type="text"/>
+</form>
+</html>
+]
+
+40- Tag de html: <legend>x</legend> [A tag de legenda é usada para 
+definir o título do conteúdo filho. Os elementos de legenda são o 
+elemento pai. Esta tag é usada para definir a legenda para o elemento 
+<fieldset> (ele baicamente adicionará um título e uma caixa para o 
+formulária que estiver sendo criado, podendo apenas utilizar uma tag 
+de <legend> para cada <fieldset>, caso mais será precisos criar novas 
+tags <fieldset>)
+EX: 
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>GeeksforGeeks</h1>
+        <strong>HTML Legend Tag</strong>
+        <form>
+            <fieldset>
+                <legend>STUDENT::</legend>
+                <label>Name:</label>
+                <input type="text">
+                <br><br>
+                <label>Email:</label>
+                <input type="text">
+                <br><br>
+                <label>Date of birth:</label>
+                <input type="text">
+                <br><br>
+                <label>Address:</label>
+                <input type="text">
+                <br><br>
+                <label>Enroll No:</label>
+                <input type="text">
+            </fieldset>
+        </form>
+    </body>
+</html>
+]
+
+41- Tag de html: <textarea></textarea> [representa um controle de 
+edição para uma caixa de texto, útil quando você quer permitir ao 
+usuário informar um texto extenso em formato livre, como um comentário 
+ou formulário de retorno,
+EX:
+<html> 
+ <label for="">Mensagem</label>
+   <br>
+   <textarea name="mensagem" cols="30" rows="10"></textarea>
+   <br><br>
+</html>
+]
+
+42- Atributos de html: rows="" e cols="" [ROWS (Vertical): número de linhas da 
+área de texto. COLS (Horizontal): número de colunas da área de texto,
+EX:
+<textarea name="mensagem" cols="10" rows="20"></textarea>
+
+43- Tecla para entrar no codigo fonte [Pressione Ctrl+U (Windows) ou ⌘-Option-U (Mac)]
+
+44- ...
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Funções
+
+45- O que são as Funções [São blocos de códigos, eles são identificados por um nome, 
+fazendo com que ele possa ser chamados mais de uma vez no programa, com isso permitindo
+que você reutilize seu proprio código (Sua finalidade é gerar um código mais "limpo")]
+
+46- "Tag" para puxar uma Função: function [Não há outra forma existente para se puxar
+uma função não sendo a "tag" function. A função não pode ser iniciada por caractérios 
+especiais (ex: $#%) e nem por números, somente por _ ou letras.  
+Estrutura básica:
+
+<?php
+function nome_funcao() {
+}
+
+obs: onde está escrito "nome_funcao" pode ser substituido pelo nome que queira 
+
+-----------
+
+Para Você poder chamar a sua função em seu código e mostrar no browser você deve utilizar 
+o nome que você deu a sua função em uma outra linha de código junto de parentes()
+Ex Prático:
+
+<?php
+function escreva_nome($nome) {
+    echo "Olá querido cliente $nome! <br>";
+}
+
+escreva_nome("Maria");
+
+escreva_nome("Pedro");
+
+escreva_nome("João");
+
+*function [é a "tag"], 
+*escreva_nome [é o nome que você deu a esta função],
+*($nome) [é o atributo dado, com ele você cria uma váriavel que pode assumir
+resultados distintos], 
+*echo "Olá querido cliente $nome! <br>"; ["tag" echo é a responsável por 
+mostrar o texto no browser,a variável $nome possibilita a sua substituição por outros valores
+e o <br> quebra a linha de texto do browser]
+*escreva_nome("Maria");
+escreva_nome("Pedro");
+escreva_nome("João");
+[É a responsável por chamar a linha de código da função criada, sem ela nada será exibido no browser]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Funções-Retorno 
+
+47- Comando return [Este comando permite que você retorne o resultado para uma 
+váriavel.
+EX: 
+
+<?php
+function soma($a, $b){
+    return  $a + $b;
+}
+$resultado = soma(2, 3);
+
+echo $resultado  * 7;
+
+[Resultado 35]
+
+48- Como deixar um valor padrão para um parametro [Para isso basta você adiconar 
+um valor para a váriavel que esta contida dentro da função, ex: function soma($a, $b = 5),
+com isso a váriavel $b possue um valor padrão de 5, mas caso haja um valor para $b na 
+chamada ela será substituida, Ex: soma(2, 3), com isso neste caso o valor de $b será 3 e 
+não 5.
+Ex Prático:
+
+<?php
+function soma($a, $b = 5){
+    return  $a + $b;
+}
+$resultado = soma(2);
+
+echo $resultado  * 7;
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Validação e Escaping 
+
+49- Validação do Código [Esse é um recurso extremamente valioso para um código de
+programação, precipalmente para a web, para poder manter a segurança da plataforma.
+Você sempre deve considerar que o código nunca vai chegar de forma correta e segura]
+
+50- Função: empty [Ela trata de validar se o tetxo esta vazio, 0, null, false,
+array(), caso o texto se enquadre em um desses termos fará com que a função: empty
+seja verdadeira, possibilitando a criação de if para a criação de código validador
+Ex Prático:
+
+<?php
+$nome = ($_POST['nome']);
+
+ if(empty($nome)){
+    echo "Infome o seu Nome!<br>";
+ }
+]
+
+51: Função trim() [Ela é responsável por remover o ESPAÇO EM VAZIO ('    ')
+que o cliente possa ter dado. Junto da função: empty faz com que ela se permaneça 
+verdadeira caso estaja vazia e com ESPAÇO (Ela também pode ser utilizada para remover 
+um caractere específico, como padrão ele remover o ESPAÇO) 
+Ex Prático:
+
+<?php
+ $email = trim($_POST['nome']);
+
+ if(empty($email)){
+    echo "informe o seu email, por favor!<br>";
+ }
+]
+
+52- Função: is_null() [Faz com que caso a variável seja nula será entendida como 
+verdadeira
+Ex Prático:
+
+<?php
+$interesses = $_POST ['interesse'] ?? null;
+
+ if(is_null($interesses)) {
+    echo 'Selecione pelo menos uma das opções!<br>';
+ }
+}
+
+53- Função: strip_tags [Ele removerá qualquer possibilitade de código de programação 
+seja implementado no frontend, em outras palavras no browser, onde ele for inserido 
+(não válido para o código por um todo)
+Ex Prático:
+
+<?php
+$mensagem = strip_tags($_POST['mensagem']);
+
+echo $mensagem;
+]
+
+<<Fim da Aula>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+► Aula: Variáveis Globais: $_SERVER, $_REQUEST, Cliente / Servidor
+
+54- Variável Global: $_SERVE [Através da variável global $_SERVER do php é possível recuperar
+uma gama de informações bastantes úteis para o aprimoramento do seu sistema (Ela basicamnete mostra 
+todas as informçãoes coletadas pelo servidor
+Ex de como puxar os dados com a Variável Global: $_SERVE:
+
+<?php
+
+var_dump($_SERVER);
+]
+
+55- Variável Global: $_REQUEST [pode ser utilizada ao invés de utilizar individualmente as variáveis 
+globais $_GET , $_POST e $_COOKIE
+Ex da Variável Global: $_REQUEST com $_GET e $_POST ao mesmo tempo:
+
+<form method="post" action="13.1-request.php?nome=joao">
+
+<input type="text" name="cor">
+
+</form>
+]
+
+<<Fim>>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+◐
+◐
+◐

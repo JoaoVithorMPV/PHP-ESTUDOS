@@ -1,0 +1,166 @@
+<<Comandos e Informações "PHP Básico">>
+
+✦Índice das Informações✦
+▷ 1- <?php
+▷ 2- echo
+▷ 3- ;
+▷ 4- echo "\n"
+▷ 5- + - * / ** 
+▷ 5- $...
+▷ 6- true
+▷ 7- false
+▷ 8- *Stings
+▷ 9- .
+▷ 10-
+▷ 11- //
+▷ 12-/* */
+▷ 13- *Função
+▷ 14- Array()
+▷ 15- Como puxar uma informa da array
+▷ 16- declaração flexível de array
+▷ 17- A função ARRAY pode ser substituida por CONCHETES 
+▷ 18- =>
+▷ 19- var_dump()
+▷ 20- php -S localhost:8000
+▷ 21- <?php ?>
+▷ 22- Tags de HTML no PHP
+▷ 23- Http - Get e Post
+▷ 24- $_GET
+▷ 25- &
+▷ 26- <h1><?php echo $_GET["banana"] ?></h1>
+▷ Mostrará como mudar de "site"
+▷ + na URL
+▷ 29- Tecla Windows + R
+
+[Nome dos Itens:]
+$: é uma variável 
+" " e ' ': são Stings
+[]: é uma array
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Windows + r [Abre o "Executar"]
+
+1- <?php [Utiliza ao iniciar uma programação PHP]
+
+2- echo [Envia para a saída a informação que deve ser mostrada 
+para o cliente, podendo ser qualquer informação, 
+ex: texto, números ou variáveis.] 
+
+3- ; [concluir uma linha de código]
+
+4- echo "\n" [Para quebra de linhas]
+
+5- + [adição], - [subtração], * [multiplicação], / [divisão],
+** [potencia]
+
+5- $... = [Cria uma váriavel]
+
+6- true [permite que uma ação seja gerada caso seja verdadeiro]
+
+7- false [não permite que uma ação seja gerada caso seja falso]
+
+8- *Stings [são cadeias de caracteres que armazenam dados textuais,
+ex: " " e ' ']
+
+9- . [Tem como finalidade realizar a junção entre duas strings distintas
+/ Concatenação]
+
+10- *diferença na concatenação com " " e ' ' [quando utilizar ASPAS
+será entendido como váriaveis, ex: $string4 = "string1 $string2"; Caso utilize Apóstrode 
+será entendido como texto $string5 = 'string1 $string2'] 
+
+11- // [cria um comentário de uma linha]
+
+12-/* */ [cria um comentário de multi linhas]
+
+13- *Função [Uma função é gerada quando se tem uma palavra 
+junto de conjunto de parentes, ex: array()]
+
+14- Array() [São matrizes de dados, possibilitam interações de 
+mais de um dado por vez]
+
+15- *Como puxar uma informa da array [Para isso você precisa
+utilizar um par de conchetes e informar a posição na váriavel
+para assim  poder estar resgatando os dados,
+ex: $localização = array(40,200,100,150)
+    echo $localização [0]
+Resultado: 40]
+
+16- declaração flexível de array
+[EX: $numeros = array(
+0,
+1,
+2,
+3,
+4,
+5
+);]
+
+17- A função ARRAY pode ser substituida por CONCHETES 
+[EX: $tabuada = [
+6,
+9,
+12,
+15,
+"Casa"
+,false
+];]
+
+18- => [seu nome é arrow, tem como finalidade substituir a chave 
+de acesso a informação na matriz (array), 
+ex: $exemplo = array(
+"xbox" => 1,
+1 => 2,
+2 => 3,
+3 => 4,
+4 => 5,
+5 => 6 
+);]
+
+19- var_dump() [Obriga a aparição de qualquer conteúdo (ele substitui
+o "echo",  ex: var_dump($numero);]
+
+20- php -S localhost:8000 [Este comando é utilizado no prompt de comando para 
+poder estar iniciando um servidor, "php -S" é o comando básico, já
+a palavra "localhost" é utilizado por causa que o documento se encontra 
+na sua máquina e por fim o "8000" tem a finalidade de identificar 
+qual porta de entrada do servidor estamos usando {Para desativar o 
+servidor utilizamos o comando Ctrl + c}. 
+(ao meu entender isso signica que o "8000" é o servidor que estamos 
+utilizando)  
+
+21- <?php ?> [tag para se utilizar php dentro com html,
+usa-se dentro do "body" ou fora da tag html(<html>xxx</html> ]
+
+22- *Tags de HTML no PHP [Pode-se utilizar tags de HTML dentro do PHP
+em determinados momentos, ex: $carro = "<h1> bmw x1 2014 </h1>"
+
+23- Http - Get e Post [Quando utilizamos o protocolo "http" usamos 
+o "get" para requisitar uma informação do servidor e o "post" 
+é o oposto, serve para o servidor receber uma informação do cliente (browser)]
+
+24- $_GET [É uma váriavel fixa que serve para informar todos os dados 
+solicitados pelo cliente/browser]
+
+25- & [Usa-se na barra de pesquisa do navegador após o endereço
+para criar mais de uma váriavel, 
+ex:http://localhost:8000/12-informacoesEntrePaginas.php?banana=amarelo&maçã=vermelha]
+
+26- <h1><?php echo $_GET["banana"] ?></h1> [Tag "h1" Deixa o texto em
+caixa alta e negrito;Tag <?php ?> puxa a linguagem "PHP" para o html;
+echo envia a informação que deve ser mostrada para o cliente;
+$_GET Mostra os dados que foram solicitados (Resultado disso está 
+no arquivo 12 da pasta "iniciando com php")]
+
+27- *Mostrará como mudar de "site" e exibir o que foi enviado 
+para o servidor [Arquivo 12 e 12.1 / curso: PHP Básico / 
+aula: Passando informações entre páginas / minuto: 7:30]
+
+28- + na URL [Simboliza a tecla espaço]
+
+29- Tecla Windows + R [Serve para abrir Executor, que possibilita 
+a iniciação de um servidor]
+<<FIM>>
+
+

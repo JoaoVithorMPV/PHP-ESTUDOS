@@ -1,0 +1,4 @@
+<<Erros PHP>>
+
+1- Syntax error [Quebra de alguma regra da linguagem, 
+ex: não fechar a string com " ", não usar ; ao final da linha de código]
